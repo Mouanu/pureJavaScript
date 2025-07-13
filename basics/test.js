@@ -23,7 +23,7 @@ accountCity = "Bangaluru"
 
 // this is called scope
 //      {
-//          }
+//          } 
 
 /*
 
@@ -32,4 +32,5 @@ because of issue in block scope and functional scope
 */
 
 
-console.table([p,e,accountCity,accountState])
+console.table([p,e,accountCity,accountState]) 
+
