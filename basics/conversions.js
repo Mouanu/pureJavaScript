@@ -7,11 +7,11 @@ let score = 15
 //  console.log(typeof valueInNumber) // number
 //  console.log(valueInNumber) // NAN => not a number
 
-//  let another = null
-//  console.log(typeof another) // object
-//  let num = Number(another)
-//  console.log(typeof num) // number
-//  console.log(num) // value of it is num
+ let another = null
+ console.log(typeof another) // object
+ let num = Number(another)
+ console.log(typeof num) // number
+ console.log(num) // 0
 
 // let another = undefined
 //  console.log(typeof another) // undefined
@@ -57,7 +57,7 @@ let score = 15
  // "anushila" =>true
 
 
- let someNumber = 33
- let stringNumber = String(someNumber)
- console.log(stringNumber) // 33
- console.log(typeof stringNumber) // string
+//  let someNumber = 33
+//  let stringNumber = String(someNumber)
+//  console.log(stringNumber) // 33
+//  console.log(typeof stringNumber) // string
