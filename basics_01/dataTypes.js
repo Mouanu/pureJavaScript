@@ -17,7 +17,7 @@ Without strict mode, x would become a global variable even if you didn’t decla
 
 
 
-// alert( 3+ 3) // will show error 
+// alert( 3+ 3) // will show error in here... but browser a giye sob thik hobe
 // as we are using node.js not browser
 // jodi browser a kortam tahole kono error asto nah
 

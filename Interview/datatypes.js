@@ -23,12 +23,12 @@
 
 // 1] primitive Data type
 // (callByvalue) --> copy hoy,copy te changes hoy, not on the main thing
-// null er type object
+// null er type object (This is called Deep copy)
 
 //  7 types: i] String, ii] Number, iii] Boolean, iv] null, v] undefined, vi] Symbol(uniqueness,complex frontend thing) , vii] BigInt (very big number)
 
 
-// 2] Non Primitive or Reference type
+// 2] Non Primitive or Reference type (er mane Shallow Copy)
 // Array, Objects, Functions typeof these are object
 // type of Non Primitive is object
 // function as variable
