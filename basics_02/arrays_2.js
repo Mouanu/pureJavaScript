@@ -1,7 +1,7 @@
 
 const arr1 = ["freer","bkvnnkdf","bgjk"]
 
-const arr2 = [ "vfkdbvf","fberkbvkdvfvnj"]
+const arr2 = [ "vfkdbvf","fberkbvkdvfvnj",["fujh","ghjul",["bfhbe","hvk"]]]
 
 // arr1.push(arr2) // push a original array k change kore day
 
@@ -24,15 +24,15 @@ const arr3 = [...arr1, ...arr2]
 
 const arr4 = [1,2,3,4,[2,3,4],9,[1,2,[4,5,8]]]
 
-const usable = arr4.flat(Infinity) // it will flat the array
+//const usable = arr4.flat(Infinity) // it will flat the array
 
 // console.log(usable)
 
 
-console.log(Array.isArray("feiufnikew")) // false , no it is  not an array
+//console.log(Array.isArray("feiufnikew")) // false , no it is  not an array
 
 // Array.from will create an array from the given one
-console.log(Array.from("feiufnikew"))  // [
+//console.log(Array.from("feiufnikew"))  // [
 //   'f', 'e', 'i', 'u',
 //   'f', 'n', 'i', 'k',
 //   'e', 'w'
@@ -40,11 +40,32 @@ console.log(Array.from("feiufnikew"))  // [
 
 
 // INTERING
-console.log(Array.from({name:"Mouli"})) // [], return empty array bcz it can't directly change the thing
+//console.log(Array.from({name:"Mouli"})) // [], return empty array bcz it can't directly change the thing
 
 
 let score1 = 100
 let score2 = 200
 let score3 = 300
 
-console.log(Array.of(score1,score2,score3)) // [ 100, 200, 300 ]
+//console.log(Array.of(score1,score2,score3)) // [ 100, 200, 300 ]
+
+
+// exercise on the above
+
+
+
+// function mergeArray(arr1,arr2,arr3,arr4){
+//     // flat each array
+//  const arr = [...arr1.flat(Infinity),...arr2.flat(Infinity),...arr3.flat(Infinity),...arr4.flat(Infinity)]
+//  console.log(arr)
+// }
+
+// mergeArray(arr1,arr2,arr3,arr4)
+
+
+//  [[1, 2], [3, [4, 5]], 6]
+
+
+const p = [...[1,2],...[3,[4,5]],...[6]]
+
+console.log(p.flat(Infinity))
