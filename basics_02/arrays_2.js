@@ -68,4 +68,94 @@ let score3 = 300
 
 const p = [...[1,2],...[3,[4,5]],...[6]]
 
-console.log(p.flat(Infinity))
+//console.log(p.flat(Infinity))
+
+const arrayLike = {
+  0: "a",
+  1: "b",
+  2: "c",
+  length: 3
+};
+
+const arr = Array.from(arrayLike);
+console.log(arr); // ["a", "b", "c"]
+
+
+
+
+
+/*
+
+
+Great question, Anushila — this one confuses a lot of people at first, but I’ll break it down **super clearly** with examples.
+
+---
+
+## 💡 What is an "Array-like object"?
+
+An **array-like object** is an object that:
+
+1. ✅ Has a **`length` property** that’s a non-negative integer.
+2. ✅ Has **numerical keys (like `"0"`, `"1"`, `"2"`, etc.)** representing indexed elements.
+3. ❌ But it’s **not actually an array** — it doesn’t inherit from `Array.prototype`.
+
+---
+
+### ✅ Example of an array-like object:
+
+```js
+const arrayLike = {
+  0: "a",
+  1: "b",
+  2: "c",
+  length: 3
+};
+```
+
+You can convert it to a real array:
+
+```js
+const arr = Array.from(arrayLike);
+console.log(arr); // ["a", "b", "c"]
+```
+
+---
+
+## 🔄 Real-life array-like objects
+
+| Object                                              | Why it’s array-like             |
+| --------------------------------------------------- | ------------------------------- |
+| `arguments` object inside a function                | Has `.length` and indexed items |
+| `NodeList` from `document.querySelectorAll()`       | Looks like an array, but isn’t  |
+| Custom objects like `{ 0: "x", 1: "y", length: 2 }` | Structured like an array        |
+
+---
+
+### ❌ Not array-like
+
+This won’t work:
+
+```js
+Array.from({ name: "Mouli" }) // → []
+```
+
+Because:
+
+* No `.length` property
+* No indexed values
+* Not iterable either
+
+---
+
+### 🗣 Interview way to explain it:
+
+> “An array-like object is any object with a `length` property and numeric keys like `0`, `1`, `2`, etc.
+> It’s not a real array, but I can convert it to one using `Array.from()` or `Array.prototype.slice.call()`.”
+
+---
+
+Would you like to try turning this into your own words once?
+Or shall we go ahead with the **final question (#7)** now? 😄
+
+
+*/
