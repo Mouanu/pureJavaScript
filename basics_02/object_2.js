@@ -86,5 +86,30 @@ key ,val
     [ [ 'id', '123abc' ], [ 'name', 'Anu' ], [ 'isLoggedin', false ] ]
 */
 
-console.log(user.hasOwnProperty("name")) // true
-console.log(user.hasOwnProperty("vfebwfberlnfl")) // false
+// console.log(user.hasOwnProperty("name")) // true
+// console.log(user.hasOwnProperty("vfebwfberlnfl")) // false
+
+
+
+// Destructing
+
+const course = {
+    a: " js",
+    price: "999",
+    instructor: "Mouli"
+}
+
+const {price} = course
+console.log(price) // 999
+const {instructor: ins} = course
+
+console.log(ins) // Mouli
+
+// destructiong kora hochhe
+const navbar = ({company}) => {
+
+}
+
+navbar(company = "NO IDEA")
+
+
