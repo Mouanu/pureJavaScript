@@ -3,7 +3,7 @@
 
 // map a use koro for of
 // array te for of use koro
-// object a for of use koro nah 
+// object a for of use koro nah  // N0000
 
 const arr = [1,2,23,4,5,6,78]
 
