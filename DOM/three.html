@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three</title>
+   
+</head>
+<body style = "  background-color: black; color:rgb(220, 226, 232)">
+    
+
+    <script>
+       const div = document.createElement('div')
+       console.log(div)
+       div.className = "main" // egulo Override kore
+       div.id = Math.floor(Math.random()*10 +1)
+       // ek round trip kom hoy
+       div.setAttribute("title","generated title") // prefers it --> eta value k niye ashe nah , directly set kore value
+       div.style.backgroundColor= "green"
+       div.style.padding= "12px"
+       //div.innerHTML = "Anushila" // override
+       // egulo 1st a value gulo k niye ashe tarpor set kore
+       
+       const addtext = document.createTextNode("Anushile")
+       div.appendChild(addtext)
+       document.body.appendChild(div)
+    </script>
+</body>
+</html>
