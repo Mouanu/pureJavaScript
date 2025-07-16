@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four</title>
+</head>
+<body style="background-color: black; color: antiquewhite;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+            <script>
+                function addLang(lang){
+                     const li = document.createElement('li')
+                    li.innerHTML = `${lang}` // innerHTML a puro traverse hoy
+                    const ul = document.querySelector(".language")
+                    ul.appendChild(li) // last porjonto tree traverse korte hobe
+                    // optimition issue
+                }
+
+                const arr = ["Python","C++","C","HTML","CSS" ]
+
+                arr.forEach(addLang)
+            
+                // appendChild use
+                function addOptiLanguage(lang){
+                     const li = document.createElement('li')
+                     li.appendChild(document.createTextNode(`${lang}`)) // puro tree traverse korte hoy nah
+                     document.querySelector(".language").appendChild(li)
+                }
+                    arr.forEach(addOptiLanguage)
+
+                    // Edit
+                  const secondLang = document.querySelector("li:nth-child(2)")
+                  const newli = document.createElement("li")
+                  newli.textContent = "golang"
+                  secondLang.replaceWith(newli)
+
+                  // Edit
+
+                  const firstlang =  document.querySelector("li:first-child")
+                  console.log(firstlang)
+                  firstlang.outerHTML = "<li>TypeScript</li>"
+
+                  // Remove
+                   const lastlang =  document.querySelector("li:last-child")
+                   lastlang.remove()
+            </script>
+</html>
