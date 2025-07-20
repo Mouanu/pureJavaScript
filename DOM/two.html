@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+
+    <style>
+        .parent{
+            background-color: black;
+            color:rgb(146, 150, 154)
+        }
+    </style>
+</head>
+<body class="parent">
+    <div class="parent1">  <!-- one line break (text)-->
+        <div class="day">Mon</div>
+        <div class="day">Tues</div>
+        <div class="day">Wed</div>
+        <div class="day">Thus</div>
+    </div>
+
+    <script>
+        const parent = document.querySelector('.parent1')
+        // console.log(parent)
+        // parent.childern gives HTMLCollection
+        // console.log(parent.children) // HTMLCollection
+        // console.log(parent.children[0].innerHTML) //Mon; 1st element k target
+
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerHTML);
+            
+        // }
+
+        // parent.children[0].style.color = "orange"
+        // console.log(parent.firstElementChild)
+        // console.log(parent.lastElementChild)
+
+        const day1 = document.querySelector('.day')
+        // console.log(day1) // mon
+        // console.log(day1.parentElement) // parent1
+        // console.log(day1.nextElementSibling) // Tues
+
+        console.log('NODES: ', parent.childNodes)
+        /*
+        childNodes are complex tree structure 
+        line break node element , text node element
+        NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+        */
+
+    </script>
+</body>
+</html>
