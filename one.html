@@ -3,25 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coding</title>
 </head>
 <body>
     <h1>Hello </h1>
+    <button id="start">Start</button>
     <button id="stop">Stop</button>
    
 </body>
 <script>
-    const changeText = function(){
-       document.querySelector('h1').innerHTML=`You can Do
-     anything and everything, be Curios and Love want you Do
-     I Want to be A great Engineer `
-    }
 
-  const changeMe = setTimeout(changeText, 2000)
+    let  intervalId = null
+
+    const sayTime = function(str) {
+  const date = new Date();
+  document.querySelector("h1").innerHTML = date.toLocaleTimeString() + " " + str;
+};
+
+document.getElementById("start").addEventListener("click", function() {
+
+  if(!intervalId)   intervalId = setInterval(sayTime, 1000, "hello Anu");
+});
+
+
+  document.getElementById("stop").addEventListener("click",function(){
+         clearInterval(intervalId)
+         intervalId = null //  // reset so you can start again
+    })
+
+
+//   clearInterval(intervalId)
+
+    // const changeText = function(){
+    //    document.querySelector('h1').innerHTML=`You can Do
+    //  anything and everything, be Curios and Love want you Do
+    //  I Want to be A great Engineer `
+    // }
+
+//   const changeMe = setTimeout(changeText, 2000)
 
     
-    document.querySelector("#stop").addEventListener('click', function(){
-        clearTimeout(changeMe)
-    }    )
+//     document.querySelector("#stop").addEventListener('click', function(){
+//         clearTimeout(changeMe)    
+//     }    )
 </script>
 </html>
